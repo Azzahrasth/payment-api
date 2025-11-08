@@ -4,7 +4,7 @@ CREATE TABLE users (
   first_name VARCHAR(100),
   last_name VARCHAR(100),
   password VARCHAR(255) NOT NULL,
-  profile_image VARCHAR(255) DEFAULT 'https://payment-api-production-8640.up.railway.app/uploads/default-profile.png',
+  profile_image VARCHAR(255) DEFAULT 'https://payment-api-production-20ab.up.railway.app/uploads/default-profile.png',
   balance DECIMAL(15,2) DEFAULT 0
 );
 

@@ -50,7 +50,7 @@ exports.uploadImage = async (req, res) => {
     }
 
     // buat image URL
-    const imageUrl = `http://localhost:3000/uploads/${req.file.filename}`;
+    const imageUrl = `https://payment-api-production-20ab.up.railway.app/uploads/${req.file.filename}`;
     await pool.query('UPDATE users SET profile_image=? WHERE email=?', [imageUrl, email]);
     const [updated] = await pool.query('SELECT email, first_name, last_name, profile_image FROM users WHERE email = ?', [email]);
 
