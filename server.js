@@ -10,6 +10,11 @@ app.use(express.urlencoded({ extended: true }));
 // agar folder uploads dapat diakses secara publik melalui URL.
 app.use('/uploads', express.static('uploads')); 
 
+app.use((req, res, next) => {
+  console.log(req.method, req.path);
+  next();
+});
+
 // Routes
 app.use('', require('./routes/auth'));
 app.use('', require('./routes/profile'));
